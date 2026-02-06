@@ -8,3 +8,16 @@ function newPrice(currentPrice, discount) {
         return newPrice.toFixed(3);
     }
 }
+
+// Problem = 02
+function validOtp(otp) {
+    if (typeof otp !== "string" || otp === null) {
+        return "Invalid";
+    } else if (otp.length !== 8) {
+        return false;
+    } else if (!otp.startsWith("ph-")) {
+        return false;
+    } else {
+        return true;
+    }
+}
