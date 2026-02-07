@@ -1,4 +1,4 @@
-// Problem - 01
+//Problem-01: New Price for Eid Sale
 function newPrice(currentPrice, discount) {
   if (
     typeof currentPrice !== "number" ||
@@ -14,7 +14,7 @@ function newPrice(currentPrice, discount) {
   }
 }
 
-// Problem - 02
+//Problem-02: OTP Validation for Zapshift
 function validOtp(otp) {
   if (typeof otp !== "string" || otp === null) {
     return "Invalid";
@@ -27,7 +27,7 @@ function validOtp(otp) {
   }
 }
 
-// Problem - 03
+//Problem-03: BCS Final Score Calculator
 function finalScore(omr) {
   const rightNumber = omr.right;
   const rightScore = rightNumber * 1;
@@ -35,11 +35,11 @@ function finalScore(omr) {
   const wrongNumber = omr.wrong;
   const wrongScore = wrongNumber * 0.5;
 
-  const skipNumber = omr.skip;
-
   const roundedTotalScore = Math.round(rightScore - wrongScore);
 
+  const skipNumber = omr.skip;
   const totalScores = rightNumber + wrongNumber + skipNumber;
+
   if (totalScores > 100 || typeof omr !== "object" || Array.isArray(omr)) {
     return "Invalid";
   } else {
@@ -47,10 +47,11 @@ function finalScore(omr) {
   }
 }
 
-// Problem - 04
+//Problem-04: Upcoming Gono Vote
 function gonoVote(array) {
   const haVote = [];
   const naVote = [];
+
   if (!Array.isArray(array)) {
     return "Invalid";
   } else {
@@ -62,8 +63,10 @@ function gonoVote(array) {
       }
     }
   }
+
   const haVoteLength = haVote.length;
   const naVoteLength = naVote.length;
+
   if (haVoteLength > naVoteLength) {
     return true;
   } else if (haVoteLength === naVoteLength) {
@@ -73,7 +76,7 @@ function gonoVote(array) {
   }
 }
 
-// Problem - 05
+//Problem-05: Text Analyzer for an AI Company
 function analyzeText(str) {
   const strObj = { longwords: "", token: 0 };
 
